@@ -8,6 +8,31 @@ alert('All systems go!')
 const username = prompt('Please enter your name:')
 alert('Welcome aboard, Captain ' + username + '!')
 
+// Ask user which planet to visit (Mars is the only correct option)
+let userPlanet
+
+while (userPlanet != "MARS") {
+    userPlanet = prompt(`Captain ${username}, which planet would you like to travel to?`)
+    userPlanet = userPlanet.toUpperCase()
+
+    switch(userPlanet) {
+        case "VENUS":
+            alert(`Trust me, Captain ${username}, Venus ain't worth the trip.`)
+            break;
+        case "SATURN":
+            alert(`Sorry, cap. The spaceship for Saturn left last week!`)
+            break;
+        case "MERCURY":
+            alert(`I can assure you, we're in the wrong season for Mercury.`)
+            break;
+        case "MARS":
+            alert(`You have impeccable taste in planets, Captain ${username}!`)
+            break;
+        default:
+            alert(`Silly captain! Mars is much more interesting than that planet!`)
+    }
+}
+
 // Exposit game premise
 alert('This is a game where you travel to Mars. How exciting!')
 
@@ -113,11 +138,13 @@ if (decorChoice === 'A') {
     alert("Do I even want to ask why you chose that one?")
 } else {
     decor = 'sketchy rest stop'
-    alert("You seem to have had trouble picking between A, B, or C. Our auto-fill system detected what you were trying to enter. Thank you for choosing 'Sketchy rest stop'")
+    alert(`You seem to have had trouble picking between A, B, or C.
+    Our auto-fill system detected what you were trying to enter.
+    Thank you for choosing 'Sketchy rest stop'`)
 }
 
 // Adventure preview
-alert(`${username} and ${companionName}, surfing the celestial abyss, in a ${decor} spaceship`)
+alert(`${username}, ${companionName}, and ${companionNameTwo} surfing the celestial abyss, in a ${decor} spaceship`)
 
 // Liftoff!
 let timer = 5
